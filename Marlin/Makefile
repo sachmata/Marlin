@@ -656,7 +656,7 @@ LIBWARN = -w -Wno-packed-bitfield-compat
 
 # Compiler flag to set the C/CPP Standard level.
 CSTANDARD = -std=gnu99
-CXXSTANDARD = -std=gnu++11
+CXXSTANDARD = -std=gnu++17
 CDEBUG = -g$(DEBUG)
 CWARN   = -Wall -Wstrict-prototypes -Wno-packed-bitfield-compat -Wno-pragmas
 CXXWARN = -Wall                     -Wno-packed-bitfield-compat -Wno-pragmas
