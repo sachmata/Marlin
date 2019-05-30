@@ -80,6 +80,7 @@
 // build by the user have been successfully uploaded into firmware.
 #define STRING_CONFIG_H_AUTHOR "(Telli Mantelli, Kris Waclawski, Samuel Pinches & Michael Gilardi, 21 Jan 2018)" // Who made the changes.
 #define SHOW_BOOTSCREEN
+//#define CUSTOM_VERSION_FILE "../../Version.h" // Path from src/inc/ directory
 
 /**
  * *** VENDORS PLEASE READ ***
