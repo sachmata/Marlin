@@ -74,8 +74,8 @@
   #error "CUSTOM_MENDEL_NAME is now CUSTOM_MACHINE_NAME. Please update your configuration."
 #elif defined(HAS_AUTOMATIC_VERSIONING)
   #error "HAS_AUTOMATIC_VERSIONING is now USE_AUTOMATIC_VERSIONING. Please update your configuration."
-#elif __has_include("../../Version.h") && defined(USE_AUTOMATIC_VERSIONING)
-  #error "USE_AUTOMATIC_VERSIONING and custom Version.h file are not compatible. Please use one or the other"
+#elif defined(CUSTOM_VERSION_FILE) && defined(USE_AUTOMATIC_VERSIONING)
+  #error "USE_AUTOMATIC_VERSIONING and CUSTOM_VERSION_FILE file are not compatible. Please use one or the other"
 #elif defined(SDSLOW)
   #error "SDSLOW deprecated. Set SPI_SPEED to SPI_HALF_SPEED instead."
 #elif defined(SDEXTRASLOW)
