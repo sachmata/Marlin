@@ -40,7 +40,7 @@
 
 // Use Adaptive step smoothing, Junction Deviation and S Curve Acceleration
 // Slower but smoother more accurate moves
-//#define SmoothMotion
+#define SmoothMotion
 
 /*
    Hotend Type
