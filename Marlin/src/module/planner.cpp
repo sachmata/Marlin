@@ -2852,7 +2852,11 @@ void Planner::set_max_acceleration(uint8_t axis, float targetValue) {
       SERIAL_ECHOLNPAIR("Max acceleration clamped to ",  (max_accel[(AxisEnum)axis] * ac_multiplier));
     planner.settings.max_acceleration_mm_per_s2[axis] = constrain(targetValue, 1, max_accel[(AxisEnum)axis] * ac_multiplier);
   #endif
+  
+  // steps per sq second need to be updated to agree with the units per sq second (as they are what is used in the planner)
+  planner.reset_acceleration_rates();
 }
+
 void Planner::set_max_feedrate(uint8_t axis, float targetValue) {
   #if DISABLED(MAX_FEEDRATE_CAP)
     planner.settings.max_feedrate_mm_s[axis] = targetValue;
@@ -2869,6 +2873,7 @@ void Planner::set_max_feedrate(uint8_t axis, float targetValue) {
     planner.settings.max_feedrate_mm_s[axis] = constrain(targetValue, 1, max_feedrates[(AxisEnum)axis] * fr_multiplier);
   #endif
 }
+
 void Planner::set_max_jerk(AxisEnum axis, float targetValue) {
   #if DISABLED(MAX_JERK_CAP)
         planner.max_jerk[axis] = targetValue;
