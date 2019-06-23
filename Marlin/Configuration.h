@@ -1425,9 +1425,9 @@
 #endif
 
 #if (ENABLED(MachineCR10Std))
-#define X_BED_SIZE 315
+#define X_BED_SIZE 275
 #define Y_BED_SIZE 310
-#define Z_MAX_POS 400
+#define Z_MAX_POS 330
 #endif
 
 #if ENABLED( MachineS4)
@@ -1605,9 +1605,9 @@
 #endif
 #if ENABLED(MeshFast)
   #define GRID_MAX_POINTS_X 3
-#elif (ENABLED(MeshStd) )
-  #define GRID_MAX_POINTS_X 5
-#elif ENABLED( MeshFine)
+#elif ENABLED(MeshStd)
+  #define GRID_MAX_POINTS_X 4
+#elif ENABLED(MeshFine)
   #define GRID_MAX_POINTS_X 8
 #elif ENABLED(MeshExtreme)
   #define GRID_MAX_POINTS_X 15
