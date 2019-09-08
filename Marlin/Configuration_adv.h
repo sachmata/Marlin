@@ -835,11 +835,11 @@
  * See http://marlinfw.org/docs/features/lin_advance.html for full instructions.
  * Mention @Sebastianv650 on GitHub to alert the author of any issues.
  */
-  #if((DISABLED(MachineCR10Orig) && DISABLED(LowMemoryBoard) && DISABLED(MachineCR10SPro) && DISABLED(MachineCR10Max) ) || ENABLED(OrigLA))
+#if((DISABLED(MachineCR10Orig) && DISABLED(LowMemoryBoard) && DISABLED(MachineCR10Max) ) || ENABLED(OrigLA) || ENABLED(MachineCR10SPro))
 #define LIN_ADVANCE
 #endif
 #if ENABLED(LIN_ADVANCE)
-  #define LIN_ADVANCE_K 0.5  // Unit: mm compression per 1mm/s extruder speed
+  #define LIN_ADVANCE_K 0.7  // Unit: mm compression per 1mm/s extruder speed
   //#define LA_DEBUG          // If enabled, this will generate debug information output over USB.
 #endif
 

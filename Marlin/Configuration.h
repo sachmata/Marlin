@@ -1606,7 +1606,7 @@
 #if ENABLED(MeshFast)
   #define GRID_MAX_POINTS_X 3
 #elif ENABLED(MeshStd)
-  #define GRID_MAX_POINTS_X 4
+  #define GRID_MAX_POINTS_X 5
 #elif ENABLED(MeshFine)
   #define GRID_MAX_POINTS_X 8
 #elif ENABLED(MeshExtreme)
